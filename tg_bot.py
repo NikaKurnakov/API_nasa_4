@@ -23,7 +23,7 @@ def main():
     args = parser.parse_args()
     token_bot = args.bot_token
     chat_id = args.chanel_id
-    file_name = "images", f"{args.file}"
+    file_name = os.path.join("images", args.file)
     arg_path = file_name if args.file else f"{random.choice(files)}"
     send_photo(token_bot, chat_id, arg_path)
 
