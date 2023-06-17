@@ -9,7 +9,6 @@ from dotenv import load_dotenv
 def get_epic_picture(numb, params):
     epic_url = 'https://api.nasa.gov/EPIC/api/natural/images'
     response = requests.get(epic_url, params=params)
-    print(response.url)
     if response.ok:
         unpacked_response = response.json()
         epic_images = []
