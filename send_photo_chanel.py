@@ -11,8 +11,7 @@ from open_and_send_files import open_and_send_files
 def send_photo_tg_chanel(token_bot, chat_id, delay_time, files):
     bot = telegram.Bot(token=token_bot)
     for file in files:
-        arg_path = file
-        open_and_send_files(arg_path, chat_id, bot)
+        open_and_send_files(file, chat_id, bot)
         time.sleep(int(delay_time))
 
 
